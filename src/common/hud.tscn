@@ -1,0 +1,48 @@
+[gd_scene load_steps=3 format=3 uid="uid://ygh6tey7yro7"]
+
+[ext_resource type="Script" path="res://src/common/hud.gd" id="1_8wrip"]
+[ext_resource type="Texture2D" uid="uid://qyfnh1wolxrr" path="res://Asset/art/playerGrey_walk1.png" id="1_isymr"]
+
+[node name="HUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8wrip")
+
+[node name="StageLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -144.0
+offset_right = -49.0
+offset_bottom = 91.0
+grow_horizontal = 0
+theme_override_font_sizes/font_size = 64
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="LifeLabel" type="Label" parent="."]
+layout_mode = 1
+offset_left = 170.0
+offset_right = 210.0
+offset_bottom = 91.0
+theme_override_font_sizes/font_size = 64
+text = "x 5"
+horizontal_alignment = 1
+vertical_alignment = 1
+uppercase = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 33.0
+offset_top = 6.0
+offset_right = 141.0
+offset_bottom = 141.0
+scale = Vector2(0.826425, 0.852)
+texture = ExtResource("1_isymr")

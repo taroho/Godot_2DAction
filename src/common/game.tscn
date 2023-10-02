@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bt78wa7j2qhsu"]
+
+[ext_resource type="Script" path="res://src/common/game.gd" id="1_iyhtk"]
+[ext_resource type="PackedScene" uid="uid://dwhtld8wtglux" path="res://src/player/player.tscn" id="2_nbmlc"]
+[ext_resource type="PackedScene" uid="uid://ygh6tey7yro7" path="res://src/common/hud.tscn" id="3_6ivvt"]
+
+[node name="Game" type="Node"]
+script = ExtResource("1_iyhtk")
+
+[node name="Player" parent="." instance=ExtResource("2_nbmlc")]
+position = Vector2(255, 537)
+
+[node name="HUDLayer" type="CanvasLayer" parent="."]
+
+[node name="HUD" parent="HUDLayer" instance=ExtResource("3_6ivvt")]
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(240, 420)
+
+[connection signal="clear" from="Player" to="." method="clear_stage"]
+[connection signal="hit" from="Player" to="HUDLayer/HUD" method="_on_player_hit"]
+[connection signal="retry" from="HUDLayer/HUD" to="." method="retry_game"]
+[connection signal="start" from="HUDLayer/HUD" to="." method="new_game"]
