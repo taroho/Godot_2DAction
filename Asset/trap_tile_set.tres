@@ -1,0 +1,33 @@
+[gd_resource type="TileSet" load_steps=7 format=3 uid="uid://d2d2axlnbu850"]
+
+[ext_resource type="Texture2D" uid="uid://pj02b1fftt6i" path="res://Asset/Traps/Spikes/Idle.png" id="1_ygx0v"]
+[ext_resource type="Texture2D" uid="uid://ceyiomagr86hn" path="res://Asset/Traps/Spiked Ball/Spiked Ball.png" id="2_ofjmq"]
+[ext_resource type="Texture2D" uid="uid://c7rpr1pnigc82" path="res://Asset/Traps/alpha.png" id="3_pxb0m"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rlehd"]
+texture = ExtResource("1_ygx0v")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, -4.5, 1.5, 3.5, 1.5, 8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cefuc"]
+texture = ExtResource("2_ofjmq")
+texture_region_size = Vector2i(28, 28)
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-12.5, 0, -8, -8, 1, -12, 8, -8, 13.5, -0.5, 9.5, 9.5, 0.5, 12.5, -8, 8)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1165v"]
+texture = ExtResource("3_pxb0m")
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, -8, 8, 8, 8, 8, -8)
+
+[resource]
+physics_layer_0/collision_layer = 4
+sources/0 = SubResource("TileSetAtlasSource_rlehd")
+sources/1 = SubResource("TileSetAtlasSource_cefuc")
+sources/2 = SubResource("TileSetAtlasSource_1165v")
